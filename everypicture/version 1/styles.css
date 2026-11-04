@@ -1,0 +1,87 @@
+body {
+    background-image: url('images/pillowbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#phos {
+    width: 150px;
+    height: auto;
+    margin-top: 60px;
+    border-radius: 26px 26px 0 0;
+    position: relative;
+    z-index: 1;
+    /* filter: brightness(0.7); */
+}
+
+#phonecase {
+    width: 614px;
+    height: auto;
+    margin-top: -245px;
+    margin-left: 21px;
+    position: relative;
+    z-index: 0;
+}
+#blackend {
+    width: 150px;
+    height: auto;
+    margin-top: -165px;
+    border-radius: 0 0 26px 26px ;
+    position: relative;
+    z-index: 1;
+}
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2; 
+    gap: 0;
+    /* filter: brightness(0.7); */
+}
+
+#display img {
+    width: 30px;
+    height: 40px;
+    object-fit: cover;
+    clip-path: inset(5px 0 5px 0);
+   
+}
+#photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 600px;
+}
+
+#caption {
+    position: absolute;
+    z-index: 3;
+    font-family: "Gluten", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+    margin-top: 185px;
+    color:#bcbcbc;
+    width: 140px;
+    text-align: center;
+}
+#hovertext {
+  padding-top: 35px;
+  font-family: "Gluten", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 18px;
+  color:rgb(71, 71, 71);
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+
+}

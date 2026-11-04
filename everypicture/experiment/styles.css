@@ -64,13 +64,15 @@ body {
 #caption {
     position: absolute;
     z-index: 3;
-    font-family: "Chivo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 14px;
-    font-style: normal;
-    margin-top: 170px;
+   font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: 185px;
     color:#bcbcbc;
+    width: 140px;
+    text-align: center;
+   
 }
 #hovertext {
   padding-top: 35px;

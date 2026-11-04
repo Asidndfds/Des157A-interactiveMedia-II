@@ -119,6 +119,11 @@ footer {
   font-size: 1em;
   text-align: center;
   line-height: 10px;
+  
+}
+footer a {
+     color:#137b95;
+     text-decoration: none;
 }
 .date {
     font-size: 14pt;

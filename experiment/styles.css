@@ -34,3 +34,15 @@ p {
   text-align: center;
   font-size: 1.6em;
 }
+footer {
+   padding-top: 30px;
+}
+footer a {
+     color:#137b95;
+     text-decoration: none;
+     transition: all 0.3s ease-in-out;
+    
+}
+footer a:hover {
+  font-size: 1.3em;
+}
