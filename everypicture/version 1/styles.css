@@ -24,14 +24,13 @@ body {
 
 #pause {
     position: absolute;
-    width: 50px;
     z-index: 4;
     top: 140px;
     pointer-events: none;
     left: calc(40% + 120px);
     opacity: 0;
     transition: left 0.3s ease-out, top 0.3s ease-out, opacity 0.25s ease;
-    width: 67px;
+    width: 46px;
     height: auto;
 }
 #photos:has(#phos:hover) #pause {
