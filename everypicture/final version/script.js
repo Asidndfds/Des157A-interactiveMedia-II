@@ -7,10 +7,15 @@
 
     const phos=document.querySelector('#phos');
     const caption=document.querySelector('#caption');
+    const photos = document.querySelector('#photos');
+
     let i = 0;
     let read;
     let paused = false;
 
+    document.addEventListener('click', function(){
+        photos.classList.toggle('zoomed');
+    });
     function showImage(){
      phos.src =images[i]; 
      caption.textContent = texts[i];
