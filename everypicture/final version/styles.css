@@ -1,13 +1,13 @@
 html {
     background-color: rgb(104, 101, 202);
-}
+} 
 body {
     background-image: url('images/pillowbg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 
-    min-height: 100dvh;
+    min-height: 100vh;
     min-width: 100%;
     display: flex;
     justify-content: center;
@@ -18,7 +18,11 @@ body {
     overflow-x:hidden;
     overscroll-behavior: none;
 }
-
+img {
+    display: block;
+    max-width: 100%;
+    height:auto;
+}
 #phos {
     width: 150px;
     height: auto;
