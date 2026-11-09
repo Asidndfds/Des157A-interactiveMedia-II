@@ -13,37 +13,36 @@
     let read;
     let paused = false;
 
-    document.addEventListener('click', function(){
-        photos.classList.toggle('zoomed');
+    document.addEventListener('click', function(){ //when a click is heard, run this function
+        photos.classList.toggle('zoomed'); // make the #photos zoomed in or out
     });
     function showImage(){
-     phos.src =images[i]; 
-     caption.textContent = texts[i];
+     phos.src =images[i]; // make the photo to image[i]
+     caption.textContent = texts[i]; // make the caption to texts[i]
     }
    
    function nextImage(){
-     i=(i+1)%images.length;
+     i=(i+1)%images.length; // make the next image i+1 and return to the first one and repeat
         showImage();
    }
-    function changeBox(delay=2500) {
+    function changeBox(delay=2500) { //the time delay between changing images is 2.5s
         clearTimeout(read);
         read = setTimeout(function(){
            nextImage();
            changeBox();
         }, delay);
     }
-    function pause(){
+    function pause(){ // when the image changing is paused, cancel the timer
         paused =true;
         clearTimeout(read);
     }
-    function resume(){
-        if (!paused) return;
+    function resume(){ // when the image changing is unpaused, the next image will be played with a shorter delay 
+        if (!paused) return; // nothing happens if the photo isn't paused
         paused = false;
-        // nextImage();
         changeBox(670);
     }
     showImage();
-    phos.addEventListener('mouseenter', pause);
-    phos.addEventListener('mouseleave', resume);
+    phos.addEventListener('mouseenter', pause); //when the mouse enters the changing photo area, it pauses
+    phos.addEventListener('mouseleave', resume); //when the mouse left the changing photo area, it resumes
     changeBox();
 })();
