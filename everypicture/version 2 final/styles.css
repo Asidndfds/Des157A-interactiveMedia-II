@@ -1,6 +1,6 @@
-/* html {
-    background-color: rgb(104, 101, 202);
-} */
+html {
+    background-color: #4d4d7a;
+}
 body {
     background-image: url('images/pillowbg.png');
     background-size: cover;
@@ -81,11 +81,9 @@ body {
     display: flex;
     flex:none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    
     position: fixed;
-    top:50%;
+    top:42%;
     left:50%;
     scale:1.3;
     translate: -50% -50%;
@@ -93,56 +91,35 @@ body {
 }
 
 #photos.zoomed {
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
-#click {
-    width: 56px;
-    height: auto;
-    position: fixed;
-    top: 160px;
-    right:50px;
-    
-    z-index: 6;
-    pointer-events: none;
-    opacity: 1;
-
-    transition: opacity 0.5s ease;
-
-}
-#click1 {
-    display: none;
-}
-
-body:has(#photos.zoomed) #click {
-    opacity: 0;
-
-}
 #caption {
     position: absolute;
     z-index: 3;
     font-family: "Gluten", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 16px;
-    margin-top: 275px;
+    font-size: 13pt;
+    top: 273px;
+    margin-top: 0;
     color:#bcbcbc;
     width: 140px;
     text-align: center;
+    
 }
 
 #hovertext {
   position: fixed;
   left: 50%;
-  top: 60px;
-  width: min(90vw, 320px);
+  bottom: 30px;
   translate: -50% 0;
   margin:0;
   padding:0;
   z-index: 4;
-  border-radius: 50%;
+  border-radius: 3%;
   text-align: left;
-  width: 150px;
+  width: 200px;
 
   font-family: "Gluten", cursive;
   font-optical-sizing: auto;
@@ -155,7 +132,7 @@ body:has(#photos.zoomed) #click {
   font-variation-settings:
     "slnt" 0;
   background-color:rgba(220, 220, 220, 0.5);
-  padding: 13px;
+  padding: 2px;
   /* breath-like effect */ 
   transition: opacity 0.4s ease, scale 0.4s ease;
   animation: breathe 3s ease-in-out infinite;
@@ -180,68 +157,51 @@ body:has(#photos.zoomed) #hovertext {
         transform: scale(1);
     }
 }
+
 #intro {
   font-family: "Chivo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 15pt;
-    
+  font-size: 14pt;
+  text-align: center;
   position: fixed;
-  justify-content: center;
-  bottom: 67px;
+  top: 38px;
   margin:0;
-
+  line-height: 140%;
+  width: 220px;
+  color: #fdfdfd;
 }
+
+
+
 @media (min-width: 750px){
-.tip {
-    position: fixed;
-    top: 20px;
-    right: 34px;
-}
-
-.tip-button {
-   display: block;
-   font-family: "Gluten", cursive;
-   font-weight: 700;
-   cursor: help;
-   user-select: none;
-   font-size: 36pt;
-   color: white;
-}
-
+#intro {
+    width: 500px;
+    font-size: 16pt;
+} 
  #hovertext {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 58px;
   left: auto;
-  top: calc(100% + 10px);
+  top: 30px;
+  bottom: auto;
   translate: none;
-  width: 200px;
+  width: 170px;
   font-size: 12pt;
-  text-align: left;
   padding: 12px;
   border-radius: 12%;
-  color:#3e3e3e;
-  opacity: 0;
+  color:#000000;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  line-height: 135%;
- }
- #hovertext span {
-    display: block;
+  line-height: 115%;
  }
 
  #hovertext .text1 {
     margin-bottom: 5px;
  }
 
-.tip:hover #hovertext {
-    opacity: 1;
-}
-
  body {
     padding: 0;
-
  }
  #photos {
     zoom: 0.8;
@@ -260,34 +220,5 @@ body:has(#photos.zoomed) #hovertext {
 #hovertext .text1 {
     margin-bottom: 12px;
 }
-#click, #click1{
-    width: 89px;
-    height: auto;
-    position: fixed;
-    top: 380px;
-    z-index: 6;
-    pointer-events: none;
-    opacity: 0.8;
 
-    translate: 20px 20px;
-    transition: opacity 0.4s ease, translate 0.4s ease-out, scale 0.5s ease-in-out;
-}
-#click {
-    right:250px;
-}
-#click1 {
-    display: block;
-    left: 250px;
-    right: auto;
-    translate:-20px 20px;
-    scale:-1 1;
-}
-body:has(#photos.zoomed) #click {
-    scale:1.5;
-    opacity: 0.9;
-}
-body:has(#photos.zoomed) #click1 {
-    scale:-1.5 1.5;
-    opacity: 0.9;
-}
 }
