@@ -2,7 +2,7 @@ html {
     background-color: #4d4d7a;
 }
 body {
-    background-image: url('images/pillowbg.png');
+    background-image: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,.2) 40%,rgba(0,0,0,0.3) 100%), url('images/pillowbg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -18,7 +18,9 @@ body {
     overflow-x:hidden;
     overscroll-behavior: none;
 }
-
+body:has(#photos.zoomed) {
+    background-image: radial-gradient(ellipse at center, rgba(0,0,0, 0.3) 0%, rgba(0,0,0, 0.3) 40%, rgba(0,0,0, 0.65) 75%), url('images/pillowbg.png');
+}
 #phos {
     width: 150px;
     height: auto;
@@ -112,7 +114,6 @@ body {
     color:#bcbcbc;
     width: 140px;
     text-align: center;
-    
 }
 
 #hovertext {
